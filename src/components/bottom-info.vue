@@ -64,9 +64,10 @@ export default {
 .bottom{
   height: 200px;
   padding: 20px 60px;
-  width: 60%;
+  width: 75%;
   margin: auto;
   display: flex;
+  justify-content: space-between;
 }
 .about-us{
   display: flex;

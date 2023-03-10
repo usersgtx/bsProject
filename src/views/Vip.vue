@@ -1,7 +1,9 @@
 <template>
   <div class="main-vip">
     <!--顶部切换栏-->
-    <top-tab></top-tab>
+    <div class="tab-style">
+      <top-tab></top-tab>
+    </div>
     <div class="vip-content">
       <img src="../assets/vip/banner.png" style="width: 100%;height: 300px">
       <!--会员活动-->
@@ -82,8 +84,12 @@ export default {
   width: 100%;
   height: 100%
 }
+.tab-style{
+  background: rgba(252, 233, 234, 0.3);
+  width: 100%;
+}
 .vip-content{
-  width: 70%;
+  width: 75%;
   margin: auto;
 }
 .vip-part2{

@@ -30,17 +30,18 @@ export default {
 
 <style scoped lang="scss">
 .tab-bg{
+  width: 75%;
+  margin: auto;
   display: flex;
   justify-content: space-between;
   align-items: center;
   height: 60px;
-  background: rgba(252, 233, 234, 0.4);
   z-index: 9999;
 }
 .tab-left{
   display: flex;
   align-items: center;
-  margin-left: 20px;
+  //margin-left: 20px;
 }
 .tab-text-green{
   cursor: pointer;
@@ -59,7 +60,7 @@ export default {
   margin-left: 20px;
 }
 .tab-right{
-  margin-right: 40px;
+  //margin-right: 40px;
 }
 .tab-right span{
   margin-left: 8px;

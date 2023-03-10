@@ -8,6 +8,8 @@ const routes = [
   { path: '/Home', name: 'Home', component: () => import('../views/Home.vue'), },
   // eslint-disable-next-line import/extensions
   { path: '/Vip', name: 'Vip', component: () => import('../views/Vip.vue'), },
+  // eslint-disable-next-line import/extensions
+  { path: '/PaymentSucceeded', name: 'PaymentSucceeded', component: () => import('../views/PaymentSucceeded.vue'), },
   { path: '*', redirect: '/Home' },
 ];
 

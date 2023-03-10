@@ -1,9 +1,10 @@
 <template>
   <div class="main-home">
-    <div style="width: 100%;">
       <!--顶部切换栏-->
-      <top-tab></top-tab>
-<!--      <div style="width: 70%;margin: auto">-->
+      <div class="tab-style">
+        <top-tab></top-tab>
+      </div>
+      <div class="home-content">
         <!--滚动-->
         <el-carousel height="300px">
           <el-carousel-item v-for="item in 4" :key="item">
@@ -61,7 +62,7 @@
             <img src="../assets/home-part5/part4img4.jpg">
           </div>
         </div>
-<!--      </div>-->
+      </div>
 
     <!--底部-->
       <div class="bottom-info">
@@ -69,7 +70,6 @@
       </div>
 
     </div>
-  </div>
 </template>
 
 <script>
@@ -93,6 +93,14 @@ export default {
 .main-home {
   width: 100%;
   height: 100%
+}
+.tab-style{
+  background: rgba(252, 233, 234, 0.3);
+  width: 100%;
+}
+.home-content{
+  width: 75%;
+  margin: auto;
 }
 .home-part3{
   padding: 20px 0;
