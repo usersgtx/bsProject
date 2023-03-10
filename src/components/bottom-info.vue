@@ -102,14 +102,12 @@ export default {
 .input-style{
   width: 260px;
   margin-top: 25px;
+  ::v-deep .el-button{
+    padding: 7px 30px;
+  }
+  ::v-deep .el-textarea__inner {
+    resize: none;
+  }
 }
 
-</style>
-<style lang="scss">
-.el-textarea__inner {
-  resize: none;
-}
-.el-button{
-  padding: 7px 30px;
-}
 </style>

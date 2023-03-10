@@ -34,7 +34,7 @@ export default {
   justify-content: space-between;
   align-items: center;
   height: 60px;
-  background:rgba(254,234,235,0.4);
+  background: rgba(252, 233, 234, 0.4);
   z-index: 9999;
 }
 .tab-left{
@@ -43,6 +43,7 @@ export default {
   margin-left: 20px;
 }
 .tab-text-green{
+  cursor: pointer;
   color: #04c904;
   margin-left: 10px;
   font-size: 16px;
@@ -68,6 +69,7 @@ export default {
 }
 .tab-center-text{
   padding: 0 15px;
+  cursor: pointer;
 }
 
 </style>

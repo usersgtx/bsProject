@@ -7,7 +7,7 @@ const routes = [
   // eslint-disable-next-line import/extensions
   { path: '/Home', name: 'Home', component: () => import('../views/Home.vue'), },
   // eslint-disable-next-line import/extensions
-  { path: '/about', name: 'About', component: () => import('../views/About.vue'), },
+  { path: '/Vip', name: 'Vip', component: () => import('../views/Vip.vue'), },
   { path: '*', redirect: '/Home' },
 ];
 

@@ -1,65 +1,67 @@
 <template>
-  <div class="index-main">
+  <div class="main-home">
     <div style="width: 100%;">
       <!--顶部切换栏-->
       <top-tab></top-tab>
-      <!--滚动-->
-      <el-carousel height="300px">
-        <el-carousel-item v-for="item in 4" :key="item">
-          <h4>{{ item }}</h4>
-        </el-carousel-item>
-      </el-carousel>
-     <!--热卖-->
-      <div class="home-part3">
-        <p>热卖</p>
-        <div class="part3-row2">
-          <div class="part3-row2-line"></div>
-          <div class="part3-row2-text">Selling like hotcakes</div>
-          <div class="part3-row2-line"></div>
+<!--      <div style="width: 70%;margin: auto">-->
+        <!--滚动-->
+        <el-carousel height="300px">
+          <el-carousel-item v-for="item in 4" :key="item">
+            <h4>{{ item }}</h4>
+          </el-carousel-item>
+        </el-carousel>
+        <!--热卖-->
+        <div class="home-part3">
+          <p>热卖</p>
+          <div class="part3-row2">
+            <div class="part3-row2-line"></div>
+            <div class="part3-row2-text">Selling like hotcakes</div>
+            <div class="part3-row2-line"></div>
+          </div>
         </div>
-      </div>
 
-      <div class="home-part4">
-        <div>
-          <img src="../assets/home-part4/img1.jpeg">
+        <div class="home-part4">
           <div>
-            <p style="margin-left: 20px;">测试</p>
-            <p style="margin-left: 20px;">测试</p>
+            <img src="../assets/home-part4/img1.jpeg">
+            <div>
+              <p style="margin-left: 20px;">测试</p>
+              <p style="margin-left: 20px;">测试</p>
+            </div>
+          </div>
+          <div>
+            <img src="../assets/home-part4/img2.jpeg">
+            <div>
+              <p style="margin-left: 20px;">测试</p>
+              <p style="margin-left: 20px;">测试</p>
+            </div>
+          </div>
+          <div>
+            <img src="../assets/home-part4/img3.jpeg">
+            <div>
+              <p style="margin-left: 20px;">测试</p>
+              <p style="margin-left: 20px;">测试</p>
+            </div>
+          </div>
+          <div>
+            <img src="../assets/home-part4/img4.jpeg">
+            <div>
+              <p style="margin-left: 20px;">测试</p>
+              <p style="margin-left: 20px;">测试</p>
+            </div>
           </div>
         </div>
-        <div>
-          <img src="../assets/home-part4/img2.jpeg">
-          <div>
-            <p style="margin-left: 20px;">测试</p>
-            <p style="margin-left: 20px;">测试</p>
+        <!--新品首发-->
+        <div class="home-part5">
+          <div style="display: flex">
+            <img src="../assets/home-part5/part4img1.jpg">
+            <img src="../assets/home-part5/part4img2.jpg">
+          </div>
+          <div style="display: flex">
+            <img src="../assets/home-part5/part4img3.jpg">
+            <img src="../assets/home-part5/part4img4.jpg">
           </div>
         </div>
-        <div>
-          <img src="../assets/home-part4/img3.jpeg">
-          <div>
-            <p style="margin-left: 20px;">测试</p>
-            <p style="margin-left: 20px;">测试</p>
-          </div>
-        </div>
-        <div>
-          <img src="../assets/home-part4/img4.jpeg">
-          <div>
-            <p style="margin-left: 20px;">测试</p>
-            <p style="margin-left: 20px;">测试</p>
-          </div>
-        </div>
-      </div>
-      <!--新品首发-->
-      <div class="home-part5">
-        <div style="display: flex">
-          <img src="../assets/home-part5/part4img1.jpg">
-          <img src="../assets/home-part5/part4img2.jpg">
-        </div>
-        <div style="display: flex">
-          <img src="../assets/home-part5/part4img3.jpg">
-          <img src="../assets/home-part5/part4img4.jpg">
-        </div>
-      </div>
+<!--      </div>-->
 
     <!--底部-->
       <div class="bottom-info">
@@ -88,7 +90,7 @@ export default {
 };
 </script>
 <style scoped lang="scss">
-.index-main {
+.main-home {
   width: 100%;
   height: 100%
 }
@@ -196,10 +198,5 @@ export default {
 
 .el-carousel__item:nth-child(2n+1) {
   background-color: #d3dce6;
-}
-.aaa{
-  .el-carousel__item--card{
-    width: 30%;
-  }
 }
 </style>
