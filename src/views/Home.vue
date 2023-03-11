@@ -1,14 +1,10 @@
 <template>
   <div class="main-home">
-      <!--顶部切换栏-->
-      <div class="tab-style">
-        <top-tab></top-tab>
-      </div>
       <div class="home-content">
         <!--滚动-->
         <el-carousel height="300px">
-          <el-carousel-item v-for="item in 4" :key="item">
-            <h4>{{ item }}</h4>
+          <el-carousel-item v-for="item in bannerList" :key="item.id">
+            <img :src="item.img" alt="" width="1140px" height="300px">
           </el-carousel-item>
         </el-carousel>
         <!--热卖-->
@@ -74,15 +70,25 @@
 
 <script>
 
-import TopTab from '../components/topTab';
+// import TopTab from '../components/topTab';
 import BottomInfo from '../components/bottom-info';
 
 export default {
   name: 'Home',
-  // components: { BottomInfo },
-  components: { TopTab, BottomInfo },
+  components: { BottomInfo },
+  // components: { TopTab, BottomInfo },
   data () {
     return {
+      bannerList: [
+        {
+          id: 1,
+          img: require('../assets/home/home-banner2.jpg')
+        },
+        {
+          id: 2,
+          img: require('../assets/home/home-banner3.jpg')
+        },
+      ],
     };
   },
   methods: {

@@ -10,6 +10,14 @@ const routes = [
   { path: '/Vip', name: 'Vip', component: () => import('../views/Vip.vue'), },
   // eslint-disable-next-line import/extensions
   { path: '/PaymentSucceeded', name: 'PaymentSucceeded', component: () => import('../views/PaymentSucceeded.vue'), },
+  // eslint-disable-next-line import/extensions
+  { path: '/About', name: 'About', component: () => import('../views/About.vue'), },
+  // eslint-disable-next-line import/extensions
+  { path: '/Shop', name: 'Shop', component: () => import('../views/Shop.vue'), },
+  // eslint-disable-next-line import/extensions
+  { path: '/MyInfo', name: 'MyInfo', component: () => import('../views/MyInfo.vue'), },
+  // eslint-disable-next-line import/extensions
+  { path: '/ContactMe', name: 'ContactMe', component: () => import('../views/ContactMe.vue'), },
   { path: '*', redirect: '/Home' },
 ];
 

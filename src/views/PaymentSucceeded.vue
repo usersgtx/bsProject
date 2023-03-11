@@ -1,9 +1,5 @@
 <template>
   <div class="main-paySuccess">
-    <!--顶部切换栏-->
-    <div class="tab-style">
-      <top-tab></top-tab>
-    </div>
     <div class="paySuccess-content">
       <div class="paySuccess-part1">基于热爱，向往浪漫，花是期待的最好见证者</div>
       <div class="paySuccess-part2">
@@ -31,12 +27,11 @@
 </template>
 
 <script>
-import TopTab from "../components/topTab";
 import BottomInfo from "../components/bottom-info";
 
 export default {
   name: "PaymentSucceeded",
-  components: {BottomInfo, TopTab},
+  components: {BottomInfo},
   data(){
     return {
       flowPathList: [

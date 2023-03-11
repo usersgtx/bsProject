@@ -1,7 +1,7 @@
 <template>
     <div class="tab-bg">
       <div class="tab-left">
-        <i class="el-icon-phone-outline"></i>
+        <img src="../assets/home/home-top-tell.png" width="44px" height="44px">
         <span class="tab-text-green">电话 070-5552-9166</span>
         <span class="tab-left-logo">朝花夕拾</span>
       </div>
@@ -41,12 +41,10 @@ export default {
 .tab-left{
   display: flex;
   align-items: center;
-  //margin-left: 20px;
 }
 .tab-text-green{
   cursor: pointer;
   color: #04c904;
-  margin-left: 10px;
   font-size: 16px;
 }
 .tab-left-logo{

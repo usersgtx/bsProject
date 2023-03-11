@@ -1,9 +1,5 @@
 <template>
   <div class="main-vip">
-    <!--顶部切换栏-->
-    <div class="tab-style">
-      <top-tab></top-tab>
-    </div>
     <div class="vip-content">
       <img src="../assets/vip/banner.png" style="width: 100%;height: 300px">
       <!--会员活动-->
@@ -41,12 +37,11 @@
 </template>
 
 <script>
-import TopTab from "../components/topTab";
 import BottomInfo from "../components/bottom-info";
 
 export default {
   name: "Vip",
-  components: {BottomInfo, TopTab},
+  components: {BottomInfo},
   data(){
     return {
       imgArr: [
