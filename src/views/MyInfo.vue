@@ -26,7 +26,7 @@
       <div class="myInfo-part4">
         <div style="width: 100%;text-align: left;margin-left: 20px">我的服务</div>
         <div class="myInfo-part3-content" style="padding: 40px">
-          <div class="myInfo-part3-item" v-for="item in imgArr" :key="item.id">
+          <div class="myInfo-part3-item" v-for="item in imgArr" :key="item.id" @click="handleAddress(item.id)">
             <img :src="item.img" alt="">
             <div>{{item.name}}</div>
           </div>
@@ -110,8 +110,12 @@ export default {
   methods: {
     handleAllOrders(val){
       this.$store.commit('setTabId', val);
-      // 接收参数
       this.$router.push('AllOrders');
+    },
+    handleAddress(val){
+      if (val === 6) {
+        this.$router.push('address');
+      }
     },
   }
 };

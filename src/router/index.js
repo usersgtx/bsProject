@@ -25,6 +25,8 @@ const routes = [
   { path: '/ProductDetails', name: 'ProductDetails', component: () => import('../components/ProductDetails'), },
   // eslint-disable-next-line import/extensions
   { path: '/AllOrders', name: 'AllOrders', component: () => import('../components/AllOrders'), },
+  // eslint-disable-next-line import/extensions
+  { path: '/address', name: 'address', component: () => import('../components/address'), },
   { path: '*', redirect: '/Home' },
 ];
 
