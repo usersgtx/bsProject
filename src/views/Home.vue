@@ -8,62 +8,60 @@
           </el-carousel-item>
         </el-carousel>
         <!--热卖-->
-        <div class="home-part3">
+        <div class="home-part2">
           <p>热卖</p>
-          <div class="part3-row2">
-            <div class="part3-row2-line"></div>
-            <div class="part3-row2-text">Selling like hotcakes</div>
-            <div class="part3-row2-line"></div>
+          <div class="part2-row2">
+            <div class="part2-row2-line"></div>
+            <div class="part2-row2-text">Selling like hotcakes</div>
+            <div class="part2-row2-line"></div>
           </div>
         </div>
 
-        <div class="home-part4">
+        <div class="home-part3">
           <div>
-            <img src="../assets/home-part4/img1.jpeg">
+            <img src="../assets/home/home-part3-img1.jpg">
             <div>
-              <p style="margin-left: 20px;">测试</p>
-              <p style="margin-left: 20px;">测试</p>
+              <p class="home-part3-title">厄瓜多尔</p>
+              <p class="home-part3-des">爱的权杖、爱的证明、唯一真爱</p>
             </div>
           </div>
           <div>
-            <img src="../assets/home-part4/img2.jpeg">
+            <img src="../assets/home/home-part3-img2.jpg">
             <div>
-              <p style="margin-left: 20px;">测试</p>
-              <p style="margin-left: 20px;">测试</p>
+              <p class="home-part3-title">费罗伊德</p>
+              <p class="home-part3-des">一生一爱，一爱一生</p>
             </div>
           </div>
           <div>
-            <img src="../assets/home-part4/img3.jpeg">
+            <img src="../assets/home/home-part3-img3.jpg">
             <div>
-              <p style="margin-left: 20px;">测试</p>
-              <p style="margin-left: 20px;">测试</p>
+              <p class="home-part3-title">浪漫爱人</p>
+              <p class="home-part3-des">我的眼中只有你</p>
             </div>
           </div>
           <div>
-            <img src="../assets/home-part4/img4.jpeg">
+            <img src="../assets/home/home-part3-img4.jpg">
             <div>
-              <p style="margin-left: 20px;">测试</p>
-              <p style="margin-left: 20px;">测试</p>
+              <p class="home-part3-title">卡布奇诺</p>
+              <p class="home-part3-des">与你不期而遇，注定美好</p>
             </div>
           </div>
         </div>
         <!--新品首发-->
-        <div class="home-part5">
+        <div class="home-part4">
           <div style="display: flex">
-            <img src="../assets/home-part5/part4img1.jpg">
-            <img src="../assets/home-part5/part4img2.jpg">
+            <img src="../assets/home/home-part4-img1.png" style="width: 530px;height: 240px">
+            <img src="../assets/home/home-part4-img2.png">
           </div>
           <div style="display: flex">
-            <img src="../assets/home-part5/part4img3.jpg">
-            <img src="../assets/home-part5/part4img4.jpg">
+            <img src="../assets/home/home-part4-img3.png">
+            <img src="../assets/home/home-part4-img4.png">
           </div>
         </div>
       </div>
 
     <!--底部-->
-      <div class="bottom-info">
-        <bottom-info></bottom-info>
-      </div>
+    <bottom-info></bottom-info>
 
     </div>
 </template>
@@ -80,6 +78,10 @@ export default {
   data () {
     return {
       bannerList: [
+        {
+          id: 0,
+          img: require('../assets/home/home-banner1.png')
+        },
         {
           id: 1,
           img: require('../assets/home/home-banner2.jpg')
@@ -108,50 +110,61 @@ export default {
   width: 75%;
   margin: auto;
 }
-.home-part3{
+.home-part2{
   padding: 20px 0;
   justify-content: center;
   align-items: center;
   display: flex;
   flex-direction: column;
 }
-.home-part3 p{
+.home-part2 p{
   font-size: 20px;
 }
-.part3-row2{
+.part2-row2{
   display: flex;
   align-items: center;
   padding: 10px 0;
 }
-.part3-row2-line{
+.part2-row2-line{
   height: 1px;
   width: 180px;
   background: #adadad;
 }
-.part3-row2-text{
+.part2-row2-text{
   width: 180px;
   text-align: center;
   color: #adadad;
 }
-.home-part4{
+.home-part3{
   margin-top: 30px;
   height: 350px;
   display: flex;
   justify-content: center;
   align-items: center;
-  background: #e2e2e2;
+  background: rgba(250, 228, 228, 0.3);
 }
-.home-part4 div{
+.home-part3-title{
+  font-size: 18px;
+  margin-left: 20px;
+  margin-top: 10px;
+}
+.home-part3-des{
+  font-size: 12px;
+  margin-left: 20px;
+  margin-top: 10px;
+  color: #dad7d1;
+}
+.home-part3 div{
   position: relative;
   width: 200px;
   height: 350px;
   text-align: center;
 }
-.home-part4 div img{
+.home-part3 div img{
   width: 200px;
   height: 350px;
 }
-.home-part4 div div{
+.home-part3 div div{
   text-align: left;
   font-size: 18px;
   color: #ffffff;
@@ -162,21 +175,22 @@ export default {
   position: absolute;
   bottom: 0;
 }
-.home-part4 div:hover div{
+.home-part3 div:hover div{
   color: transparent;
   background: transparent;
+  border: 1px solid red;
 }
-.home-part4 div:hover img{
+.home-part3 div:hover img{
   cursor: pointer;
   width: 220px;
   height: 370px;
   position: relative;
   margin-top:-20px;
   margin-left: -13px;
-  border:8px solid black;
-  z-index: 999;
+  border:10px solid black;
+  z-index: 99999;
 }
-.home-part5{
+.home-part4{
   padding: 30px;
   height: 500px;
   display: flex;
@@ -185,16 +199,12 @@ export default {
   align-items: center;
   margin-top: 30px;
 }
-.home-part5 div img {
-  border-radius: 10px;
-  width: 580px;
-  height: 260px;
-  margin: 20px 20px;
-}
-.bottom-info{
-  width: 100%;
-  margin-top: 30px;
-  background: #f3f3f3;
+.home-part4 div img {
+  border-radius: 20px;
+  width: 530px;
+  height: 230px;
+  margin: 20px;
+  cursor: pointer;
 }
 </style>
 <style lang="scss">

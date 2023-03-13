@@ -6,8 +6,8 @@
         <span class="tab-left-logo">朝花夕拾</span>
       </div>
       <div>
-        <span class="tab-center-text">首页</span>
-        <span class="tab-center-text">关于</span>
+        <span class="tab-center-text" @click="handleHome">首页</span>
+        <span class="tab-center-text" @click="handleAbout">关于</span>
         <span class="tab-center-text">商店</span>
         <span class="tab-center-text">会员</span>
         <span class="tab-center-text">微博 </span>
@@ -24,7 +24,28 @@
 
 <script>
 export default {
-  name: 'topTab'
+  name: 'topTab',
+  data () {
+    return {
+      clicked: false,
+    };
+  },
+  methods: {
+    handleHome(){
+      console.log("!!!!!!!!!!!");
+      this.$router.push({
+        name: 'Home',
+    });
+    },
+    handleAbout(){
+      this.$router.push({
+        name: 'About',
+        query: {}
+      });
+      // this.$router.push('/About');
+    },
+
+  }
 };
 </script>
 

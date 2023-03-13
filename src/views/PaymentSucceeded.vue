@@ -1,7 +1,11 @@
 <template>
   <div class="main-paySuccess">
     <div class="paySuccess-content">
-      <div class="paySuccess-part1">基于热爱，向往浪漫，花是期待的最好见证者</div>
+      <div class="paySuccess-part1-title">
+        <div class="paySuccess-part1-text">基于热爱</div>
+        <div class="paySuccess-part1-text">向往浪漫</div>
+        <div class="paySuccess-part1-text">花是期待的最好见证者</div>
+      </div>
       <div class="paySuccess-part2">
         <div class="paySuccess-part2-text1">订单已完成</div>
         <div class="paySuccess-part2-text2">支付成功，订单已完成</div>
@@ -11,18 +15,23 @@
           <div class="part3-item" v-for="item in flowPathList" :key="item.id" >
             <div class="part3-item-content">
               <div class="part3-item-number">{{item.id}}</div>
-              <div style="margin-top: 10px">{{item.name}}</div>
+              <div style="margin: 15px 0">{{item.name}}</div>
               <div class="part3-item-line"></div>
             </div>
           </div>
         </div>
-
+      </div>
+      <div class="paySuccess-part4">
+        <img src="../assets/pay-succeeded/part4-img.png" alt="" width="220" height="240">
+        <div class="paySuccess-part4-text">感谢您与我们一起购物,您的订单已完成!</div>
+        <div style="display: flex">
+          <div class="button-home">主页</div>
+          <div class="button-shopping">继续购物</div>
+        </div>
       </div>
     </div>
     <!--底部-->
-    <div class="bottom-info">
-      <bottom-info></bottom-info>
-    </div>
+    <bottom-info></bottom-info>
   </div>
 </template>
 
@@ -66,7 +75,13 @@ export default {
   width: 75%;
   margin: auto;
 }
-.paySuccess-part1{
+.paySuccess-part1-title{
+  display: flex;
+  width: 35%;
+  margin: auto;
+  justify-content: space-between
+}
+.paySuccess-part1-text{
   font-size: 18px;
   text-align: center;
   padding: 20px 0;
@@ -87,11 +102,6 @@ export default {
   font-size: 16px;
   color: #ffffff;
   margin-top: 10px;
-}
-.bottom-info{
-  width: 100%;
-  margin-top: 30px;
-  background: #f3f3f3;
 }
 .paySuccess-part3{
   display: flex;
@@ -133,6 +143,47 @@ export default {
   height: 1px;
   background: #88b940;
   text-align: center;
-  margin-top: 10px;
+}
+.paySuccess-part4{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 30px;
+  ::v-deep .el-button--primary{
+    background-color: #7fbd7e;
+    border-color: #d8f6d6;
+  }
+  ::v-deep .el-button:focus, .el-button:hover{
+    background-color: #f0f9eb;
+    border-color: #c2e7b0;
+    color: #7fbd7e;
+  }
+  ::v-deep .el-button{
+    border-color: #d8f6d6;
+    color: #7fbd7e;
+  }
+}
+.button-home{
+  padding: 10px 30px;
+  border:1px solid #d8f6d6;
+  color: #7fbd7e;
+  border-radius: 4px;
+  text-align: center;
+  cursor: pointer;
+  margin-right: 20px;
+}
+.button-shopping{
+  padding: 10px 20px;
+  background-color: #7fbd7e;
+  border-color: #d8f6d6;
+  color: #ffffff;
+  border-radius: 4px;
+  text-align: center;
+  cursor: pointer;
+}
+.paySuccess-part4-text{
+  font-size: 18px;
+  margin: 20px 0;
 }
 </style>

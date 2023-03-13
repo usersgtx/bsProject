@@ -18,6 +18,8 @@ const routes = [
   { path: '/MyInfo', name: 'MyInfo', component: () => import('../views/MyInfo.vue'), },
   // eslint-disable-next-line import/extensions
   { path: '/ContactMe', name: 'ContactMe', component: () => import('../views/ContactMe.vue'), },
+  // eslint-disable-next-line import/extensions
+  { path: '/ProductDetails', name: 'ProductDetails', component: () => import('../components/ProductDetails'), },
   { path: '*', redirect: '/Home' },
 ];
 

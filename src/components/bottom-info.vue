@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="bottom-bg">
     <div class="bottom">
       <div class="about-us">
         <div class="bottom-tittle">关于我们</div>
@@ -32,7 +32,7 @@
         </div>
       </div>
     </div>
-    <div style="border-top: 1px solid #c7c5c5;width: 100%;padding: 10px 0">
+    <div style="width: 100%;line-height: 30px;height: 30px;border-top: 1px solid #e8e6e6; ">
       <div style="display: flex;justify-content: space-between;padding: 0 60px">
         <div>版权所有@2023朝花夕拾-保留所有权益</div>
         <div>联系我们使用条款隐私政策网站地图</div>
@@ -61,9 +61,17 @@ export default {
 </script>
 
 <style scoped lang="scss">
+.bottom-bg{
+  background-image: url("../assets/bottom-img/bottom-bg.png");
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  width: 100%;
+  height: 300px;
+  z-index: 9999;
+}
 .bottom{
-  height: 200px;
-  padding: 20px 60px;
+  height: 160px;
+  padding: 90px 60px 15px 60px;
   width: 75%;
   margin: auto;
   display: flex;
@@ -91,7 +99,7 @@ export default {
 }
 .info-content-text{
   width: 150px;
-  padding-bottom: 15px;
+  padding-bottom: 10px;
 }
 .img-list{
   display: flex;
@@ -108,6 +116,10 @@ export default {
   }
   ::v-deep .el-textarea__inner {
     resize: none;
+  }
+  ::v-deep .el-button--primary{
+    background-color: #7fbd7e;
+    border-color: #7fbd7e;
   }
 }
 

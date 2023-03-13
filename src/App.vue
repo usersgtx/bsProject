@@ -1,27 +1,30 @@
 <template>
   <div id="app">
-    <div class="tab-bg">
-      <div class="tab-left">
-        <img src="./assets/home/home-top-tell.png" width="44" height="44">
-        <span class="tab-text-green">电话 070-5552-9166</span>
-        <span class="tab-left-logo">朝花夕拾</span>
-      </div>
+    <div class="top-tab">
+      <div class="tab-bg">
+        <div class="tab-left">
+          <img src="./assets/home/home-top-tell.png" width="44" height="44">
+          <span class="tab-text-green">电话 070-5552-9166</span>
+          <span class="tab-left-logo">朝花夕拾</span>
+        </div>
 
-      <div>
-        <router-link to="/Home">首页</router-link>
-        <router-link to="/About">关于</router-link>
-        <router-link to="/Shop">商店</router-link>
-        <router-link to="/Vip">会员</router-link>
-        <router-link to="/MyInfo">我的</router-link>
-        <router-link to="/ContactMe">联系我</router-link>
-      </div>
-      <div class="tab-right">
-        <i class="el-icon-user"></i>
-        <span>我的账户</span>
-        <i class="el-icon-search"></i>
-        <i class="el-icon-goods"></i>
+        <div class="router-link-style">
+          <router-link to="/Home">首页</router-link>
+          <router-link to="/About">关于</router-link>
+          <router-link to="/Shop">商店</router-link>
+          <router-link to="/Vip">会员</router-link>
+          <router-link to="/MyInfo">我的</router-link>
+          <router-link to="/ContactMe">联系我</router-link>
+        </div>
+        <div class="tab-right">
+          <i class="el-icon-user"></i>
+          <span>我的账户</span>
+          <i class="el-icon-search"></i>
+          <i class="el-icon-goods"></i>
+        </div>
       </div>
     </div>
+
     <router-view/>
   </div>
 </template>
@@ -29,7 +32,7 @@
 
 
 export default {
-  name: 'Home',
+  name: 'App',
   data () {
     return {
       clicked: false,
@@ -53,6 +56,7 @@ export default {
   width: 100vw;
   height: 100vh;
   overflow: auto;
+  overflow-x: hidden ;
 }
 a {
   text-decoration:none ;
@@ -61,16 +65,30 @@ a {
 }
 .router-link-active {
   text-decoraction: none ;
-  color: red;
+  color: #5fae5f;
+}
+.top-tab{
+  height: 60px;
+  z-index: 999999;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  border-bottom: 1px solid #ececec;
+  box-shadow: 0 0 12px 0 rgba(63, 63, 63, 0.1)
 }
 .tab-bg{
   width: 75%;
+  height: 60px;
   margin: auto;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  height: 60px;
-  z-index: 9999;
+}
+.router-link-style{
+  width: 48%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 .tab-left{
   display: flex;

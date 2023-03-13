@@ -23,16 +23,14 @@
           <div class="part3-right-activities">活动内容请查看详情</div>
           <div class="part3-right-read">→ READ MORE</div>
           <div class="part3-right-button">
-            <el-button type="primary" icon="el-icon-arrow-left" @click = "prev"></el-button>
-            <el-button type="primary" icon="el-icon-arrow-right" @click = "next" ></el-button>
+            <el-button type="primary" icon="el-icon-arrow-left" @click = "prev" ></el-button>
+            <el-button type="primary" icon="el-icon-arrow-right" @click = "next"></el-button>
           </div>
         </div>
       </div>
     </div>
     <!--底部-->
-    <div class="bottom-info">
-      <bottom-info></bottom-info>
-    </div>
+    <bottom-info></bottom-info>
   </div>
 </template>
 
@@ -50,7 +48,6 @@ export default {
         require("../assets/vip/part2-img3.jpg",),
       ],
       index: 0, // 索引是从第一张图片开始计算
-      isShow: false,
     };
   },
   methods: {
@@ -58,7 +55,6 @@ export default {
     prev() {
       this.index--;
       if (this.index < 0){
-        this.isShow = true;
         this.index = 0;
       }
     },
@@ -66,7 +62,6 @@ export default {
     next() {
       this.index++;
       if (this.index > 2){
-        this.isShow = true;
         this.index = 2;
       }
     },
@@ -78,10 +73,6 @@ export default {
 .main-vip {
   width: 100%;
   height: 100%
-}
-.tab-style{
-  background: rgba(252, 233, 234, 0.3);
-  width: 100%;
 }
 .vip-content{
   width: 75%;
@@ -157,10 +148,5 @@ export default {
     background-color: #7fbd7e;
     border-color: #7fbd7e;
   }
-}
-.bottom-info{
-  width: 100%;
-  margin-top: 30px;
-  background: #f3f3f3;
 }
 </style>
