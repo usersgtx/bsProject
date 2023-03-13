@@ -20,6 +20,11 @@ const routes = [
   { path: '/ContactMe', name: 'ContactMe', component: () => import('../views/ContactMe.vue'), },
   // eslint-disable-next-line import/extensions
   { path: '/ProductDetails', name: 'ProductDetails', component: () => import('../components/ProductDetails'), },
+  // eslint-disable-next-line import/extensions
+  { path: '/complaintsSuggestions', name: 'complaintsSuggestions', component: () => import('../components/complaintsSuggestions'), },
+  { path: '/ProductDetails', name: 'ProductDetails', component: () => import('../components/ProductDetails'), },
+  // eslint-disable-next-line import/extensions
+  { path: '/AllOrders', name: 'AllOrders', component: () => import('../components/AllOrders'), },
   { path: '*', redirect: '/Home' },
 ];
 

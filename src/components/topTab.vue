@@ -32,7 +32,6 @@ export default {
   },
   methods: {
     handleHome(){
-      console.log("!!!!!!!!!!!");
       this.$router.push({
         name: 'Home',
     });
@@ -42,7 +41,6 @@ export default {
         name: 'About',
         query: {}
       });
-      // this.$router.push('/About');
     },
 
   }

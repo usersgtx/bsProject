@@ -24,7 +24,7 @@
         </div>
       </div>
       <div class="info">
-        <div class="bottom-tittle">获取新闻稿</div>
+        <div class="bottom-tittle" @click="handleSuggestion">投诉与建议</div>
         <div class="info-content-text" style="width: 200px">用心做企业，打造好品牌</div>
         <div class="input-style">
           <el-input type="textarea" :autosize="{ minRows: 1, maxRows: 3}" placeholder="输入您的电子邮箱" v-model="textarea"></el-input>
@@ -57,6 +57,11 @@ export default {
       ]
     };
   },
+  methods: {
+    handleSuggestion(){
+      this.$router.push('complaintsSuggestions');
+    },
+  }
 };
 </script>
 
@@ -87,6 +92,7 @@ export default {
   font-size: 18px;
   color: #6cb462;
   padding-bottom: 20px;
+  cursor: pointer;
 }
 .about-us-text1{
   font-size: 16px;

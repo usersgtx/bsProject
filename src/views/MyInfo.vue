@@ -16,7 +16,7 @@
           <div class="myInfo-part3-top-right">查看全部订单>></div>
         </div>
         <div class="myInfo-part3-content" >
-          <div class="myInfo-part3-item" v-for="item in imgList" :key="item.id">
+          <div class="myInfo-part3-item" v-for="item in imgList" :key="item.id" @click="handleAllOrders(item.id)">
             <img :src="item.img" alt="">
             <div>{{item.name}}</div>
           </div>
@@ -53,19 +53,20 @@ export default {
         },
         {
           id: 2,
+          name: '待付款',
+          img: require("../assets/my-info/wait-pay.png"),
+        },
+        {
+          id: 3,
           name: '待发货',
           img: require("../assets/my-info/wait.png"),
         },
         {
-          id: 3,
+          id: 4,
           name: '待收货',
           img: require("../assets/my-info/received.png"),
         },
-        {
-          id: 3,
-          name: '待收货',
-          img: require("../assets/my-info/wait-pay.png"),
-        },
+
       ],
       imgArr: [
         {
@@ -106,6 +107,13 @@ export default {
       ],
     };
   },
+  methods: {
+    handleAllOrders(val){
+      this.$store.commit('setTabId', val);
+      // 接收参数
+      this.$router.push('AllOrders');
+    },
+  }
 };
 </script>
 
@@ -183,6 +191,7 @@ export default {
   align-items: center;
   width: 100px;
   height: 60px;
+  cursor: pointer;
   img{
     width: 40px;
     height: 40px;
